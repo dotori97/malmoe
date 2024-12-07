@@ -4,8 +4,8 @@
   justify-content: space-between;
   align-items: center;
   height: 50px; /* 고정 높이 */
-  padding: 0 20px;
-  background-color: #007bff;
+  background-color: rgb(21, 68, 78);
+  padding: 1px 10px;
   color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }

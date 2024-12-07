@@ -42,7 +42,7 @@ const Challenge = () => {
   }, [c_id]);
   
   return (
-    //<div className="page-container">
+  <div className="page-container">
     <div>
       <TabMenu />
       <div className="search-container"> 
@@ -81,6 +81,7 @@ const Challenge = () => {
         )}
       </div>
     </div>
+  </div>  
   );
 };
 

@@ -4,6 +4,7 @@ import { useWord } from "../hooks/useWord";
 import { speechToText, getGptResponse } from "../hooks/api";
 import { useAuth } from "../context/AuthContext";
 import Category from "../components/Category";
+//import "./Word.css";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import {
@@ -97,19 +98,21 @@ const Word = () => {
     setC_id(data);
   }
   return (
+    <div
+      className="word-container">
     <Grid
       container
-      spacing={2}
+      spacing={1}
       component="form"
       onSubmit={handleSubmit}
       sx={{
-        height: "80vh", // Full viewport height
+        height: "90vh", // Full viewport height
         width: "90vw",
         display: "flex", // Use Flexbox for alignment
         justifyContent: "center", // Center horizontally
         alignItems: "center", // Center vertically
-        ml: 10,
-        mt: 4,
+        ml: 5,
+        //mt: 4,
       }}
     >
       <Grid size={8}>
@@ -119,7 +122,7 @@ const Word = () => {
           fullWidth
           sx={{
             "& .MuiOutlinedInput-root": {
-              "& fieldset": { borderColor: "black", borderWidth: "2px" },
+              "& fieldset": { borderColor: "grey", borderWidth: "2px" },
               cursor: "pointer",
             },
           }}
@@ -167,21 +170,21 @@ const Word = () => {
           rows={10}
           sx={{
             "& .MuiOutlinedInput-root": {
-              "& fieldset": { borderColor: "black", borderWidth: "2px" },
+              "& fieldset": { borderColor: "grey", borderWidth: "2px" },
             },
           }}
           value={des}
           onChange={(e) => setDes(e.target.value)}
         />
       </Grid>
-      <Grid size={6}>
+      <Grid size={8}>
         <Category 
         width="100%"
         cid={c_id}
         onSelect={setC_id} 
         />
       </Grid>
-      <Grid size={6}></Grid>
+      <Grid size={4}></Grid>
       <Grid size={12}>
         <TextField
           id="memo-input"
@@ -191,7 +194,7 @@ const Word = () => {
           rows={3}
           sx={{
             "& .MuiOutlinedInput-root": {
-              "& fieldset": { borderColor: "black", borderWidth: "2px" },
+              "& fieldset": { borderColor: "grey", borderWidth: "2px" },
             },
           }}
           value={memo}
@@ -217,6 +220,7 @@ const Word = () => {
         </Stack>
       </Grid>
     </Grid>
+    </div>
   );
 };
 

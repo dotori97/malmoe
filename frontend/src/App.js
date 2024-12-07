@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+
 import HomePage from "./pages/HomePage";
 import { createTheme, ThemeProvider } from "@mui/material";
 
@@ -26,7 +28,7 @@ const theme = createTheme({
           textTransform: "none", // 텍스트 대문자 변환 방지
         },
         contained: {
-          backgroundColor: "#1976d2",
+          backgroundColor: "rgb(202, 110, 99)",
         },
       },
     },

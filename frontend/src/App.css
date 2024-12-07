@@ -1,4 +1,9 @@
-/* App.css */
+body {
+  background-color: #f0f0f0;  /* 원하는 배경색 */
+  margin: 0;
+  padding: 0;
+}
+
 .app {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -9,8 +14,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f8f9fa;
-  padding: 10px 20px;
+  height: 50px; /* 고정 높이 */
+  background-color: rgb(21, 68, 78);
+  padding: 1px 10px;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #ddd;
 }
 
@@ -26,7 +34,7 @@
 /* 중간 영역 스타일 */
 .menu {
   background-color: #e9ecef;
-  padding: 10px 0;
+  /* padding: 10px 0; */
   border-bottom: 1px solid #ddd;
 }
 

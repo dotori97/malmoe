@@ -138,7 +138,7 @@ const Dictionary = () => {
         container
         spacing={2}
         sx={{
-          //width: "90vw",
+          width: "90vw",
           display: "flex", // Use Flexbox for alignment
           justifyContent: "center", // Center horizontally
           alignItems: "centerflex-start", // Center vertically
@@ -197,7 +197,7 @@ const Dictionary = () => {
         sx={{
           justifyContent: "center",
           mt: 8,
-        }}
+        }}        
       >
         {currentData.map((card, index) => (
           // {currentData.map((card, index) => (

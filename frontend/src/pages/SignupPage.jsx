@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./UserEditPage.css";
 import {
   Card,
   CardContent,
@@ -42,6 +43,7 @@ const SignupPage = () => {
   };
 
   return (
+    <div className="user-container">
     <Card
       sx={{
         maxWidth: 400,
@@ -124,6 +126,7 @@ const SignupPage = () => {
         </CardActions>
       </Box>
     </Card>
+    </div>
   );
 };
 

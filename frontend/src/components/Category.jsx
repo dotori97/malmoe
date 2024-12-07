@@ -129,11 +129,11 @@ const Category = ({
 
       //백엔드에서 반환된 새로운 카테고리를 상태에 추가
       const newCategory = response.data; // 백엔드에서 새 카테고리 객체 반환
-      console.log("새 카테고리 추가: ", newCategory);
+      console.log("새 카테고리 추가: ",categories, newCategory.data);
 
       //setCategories([...categories, newCategory]); // 기존 상태에 새 카테고리 추가
       setCategories((prevCategories) => {
-        const updatedCategories = [...prevCategories, newCategory]
+        const updatedCategories = [...prevCategories, newCategory.data]
         return updatedCategories;
       });
 
@@ -170,18 +170,18 @@ const Category = ({
   // };
 
   const removeCategory = async () => {
-    if (categories.length === 1) {
-        alert("최소 한 개의 카테고리는 있어야 합니다.");
-        setShowWarning(false);
-        return;
-    }
+    // if (categories.length === 1) {
+    //     alert("최소 한 개의 카테고리는 있어야 합니다.");
+    //     setShowWarning(false);
+    //     return;
+    // }
 
     try {
         await axiosInstance.delete(`/category/${selectedCategory}`); // API 호출
         const updatedCategories = categories.filter(
             (cat) => cat.c_id !== selectedCategory
         );
-        setCategories(updatedCategories); // 상태 업데이트
+        setCategories(updatedCategories); 
         setSelectedCategory(updatedCategories[0]?.c_id || null); // 첫 카테고리 선택
         setShowWarning(false);
     } catch (error) {

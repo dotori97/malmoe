@@ -65,13 +65,13 @@ const deleteCategoryById = async (c_id) => {
     const transaction = await sequelize.transaction(); // 트랜잭션 시작
 
     try {
-        // Step 1: 사전에 해당 카테고리와 연관된 단어 삭제
+        //사전에 해당 카테고리와 연관된 단어 삭제
         await models.Dictionary.destroy({
             where: { c_id: c_id },
             transaction, // 트랜잭션 사용
         });
 
-        // Step 2: 카테고리 삭제
+        //카테고리 삭제
         await models.Category.destroy({
             where: { c_id: c_id },
             transaction, // 트랜잭션 사용
